@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { Chat, Favorite, Rocketseat } from '../../styles/Icons';
+import { Chat, Rocketseat, Favorite } from '../../styles/Icons';
 
 export const Container = styled.div`
   display: flex;
@@ -31,12 +31,14 @@ export const RocketseatIcon = styled(Rocketseat)`
     fill: var(--gray);
   }
 `;
+
 export const Body = styled.div`
   display: flex;
   margin-top: 3px;
 
   position: relative;
 `;
+
 export const Avatar = styled.div`
   width: 49px;
   height: 49px;
@@ -53,7 +55,6 @@ export const Content = styled.div`
   flex-direction: column;
 
   width: 100%;
-
   margin-top: 2px;
   padding-left: 59px;
 `;
@@ -72,6 +73,7 @@ export const Header = styled.div`
   time {
     color: var(--gray);
   }
+
   > strong,
   span {
     white-space: nowrap;
@@ -79,20 +81,22 @@ export const Header = styled.div`
     overflow: hidden;
   }
 `;
+
 export const Dot = styled.div`
   background: var(--gray);
   width: 2px;
   height: 2px;
   margin: 0 10px;
 `;
+
 export const Description = styled.p`
   font-size: 14px;
   margin-top: 4px;
 `;
+
 export const ImageContent = styled.div`
   margin-top: 12px;
   width: 100%;
-
   height: min(285px, max(175px, 41vw));
 
   background: var(--outline);
@@ -103,13 +107,14 @@ export const ImageContent = styled.div`
     opacity: 0.7;
   }
 `;
+
 export const Icons = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 11px auto 0;
-  width: 100%; /**mobile */
+  width: 100%; /** Mobile */
 
   @media (min-width: 330px) {
     width: 63%;
@@ -118,11 +123,12 @@ export const Icons = styled.div`
   > div {
     cursor: pointer;
 
-    &:hover: {
+    &:hover {
       opacity: 0.7;
     }
   }
 `;
+
 export const Status = styled.div`
   display: flex;
   align-items: center;
@@ -132,6 +138,7 @@ export const Status = styled.div`
   > svg {
     margin-right: 5px;
   }
+
   &:nth-child(1) {
     &,
     > svg path {
@@ -146,21 +153,27 @@ export const Status = styled.div`
     }
   }
   &:nth-child(3) {
-    color:var(--like) ;> svg path {
-      color: var(--like);
+    color: var(--like);
+
+    > svg {
+      fill: var(--like);
     }
   }
 `;
+
 const iconCSS = css`
   width: 19px;
   height: 19px;
 `;
-export const RetweetIcon = styled(Chat)`
+
+export const CommentIcon = styled(Chat)`
   ${iconCSS}
 `;
-export const CommentIcon = styled(Rocketseat)`
+
+export const RetweetIcon = styled(Rocketseat)`
   ${iconCSS}
 `;
+
 export const LikeIcon = styled(Favorite)`
   ${iconCSS}
 `;
