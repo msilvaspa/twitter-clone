@@ -34,5 +34,5 @@ export const Info = styled.div`
 `;
 
 export const FollowButton = styled(Button)`
-	padding:6px 17px;
+  padding: 6px 17px;
 `;
