@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+
 import {
   Home,
   Notifications,
@@ -45,20 +46,20 @@ export const Logo = styled(Rocketseat)`
   > path {
     fill: var(--twitter);
   }
+
   margin-bottom: 20px;
 `;
 
 export const MenuButton = styled.button`
   display: flex;
   align-items: center;
-
   flex-shrink: 0;
 
   > span {
     display: none;
   }
 
-  @media (min-width: 1280) {
+  @media (min-width: 1280px) {
     > span {
       display: inline;
       margin-left: 19px;
@@ -66,6 +67,7 @@ export const MenuButton = styled.button`
       font-weight: bold;
       font-size: 19px;
     }
+
     padding-right: 15px;
   }
 
@@ -89,19 +91,23 @@ export const MenuButton = styled.button`
     @media (min-width: 1280px) {
       width: 100%;
       height: unset;
+
       > span {
         display: inline;
       }
     }
   }
+
   cursor: pointer;
   border-radius: 25px;
+
   &:hover {
     background: var(--twitter-dark-hover);
   }
+
   &:hover,
   &.active {
-    column-span,
+    span,
     svg {
       color: var(--twitter);
       fill: var(--twitter);
@@ -147,11 +153,13 @@ export const BotSide = styled.div`
 export const Avatar = styled.div`
   width: 39px;
   height: 39px;
+
   flex-shrink: 0;
 
   border-radius: 50%;
   background: var(--gray);
 `;
+
 export const ProfileData = styled.div`
   display: none;
 
